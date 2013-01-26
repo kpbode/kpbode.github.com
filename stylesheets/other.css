@@ -1,0 +1,39 @@
+#about {
+	z-index: 1001;
+}
+
+#projects {
+	z-index: 1000;
+}
+
+#contact {
+	z-index: 999;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+}
+
+#pc_container {
+	width: 77px;
+	height: 121px;
+	display: inline;
+	float: left;
+	margin-top: -10px;
+	margin-left: 230px;
+}
+
+#pc_layer1 {
+	position: absolute;
+	width: 77px;
+	height: 121px;
+	background: url("../images/pc_layer1.png");
+}
+
+#pc_layer2 {
+	position: absolute;
+	width: 77px;
+	height: 121px;
+	background: url("../images/pc_layer2.png");
+	z-index: 99999;
+}
