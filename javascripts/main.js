@@ -98,7 +98,10 @@ function setupDesktop() {
 	var defaultCard = "about";
 	var url = document.URL;
 	if (url.match(/(.|\n)*\?((.|\n)+)$/)) {
-		defaultCard = url.replace(/(.|\n)+#\?((.|\n)+)$/g, "$2")
+		defaultCard = url.replace(/(.|\n)+#\?((.|\n)+)$/g, "$2");
+		if ([ "about", "projects", "contact" ].indexOf(defaultCard) == -1) {
+			defaultCard = "about";
+		}
 	} 
 	
 	layoutActive($("#" + defaultCard));
