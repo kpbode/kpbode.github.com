@@ -93,7 +93,15 @@ function setupDesktop() {
 		});
 	});
 	
-	layoutActive($("#about"));
+	
+	
+	var defaultCard = "about";
+	var url = document.URL;
+	if (url.match(/(.|\n)*\?((.|\n)+)$/)) {
+		defaultCard = url.replace(/(.|\n)+#\?((.|\n)+)$/g, "$2")
+	} 
+	
+	layoutActive($("#" + defaultCard));
 }
 
 function setupMobile() {
